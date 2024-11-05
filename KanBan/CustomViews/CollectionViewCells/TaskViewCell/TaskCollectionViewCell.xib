@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TaskCollectionViewCell" id="gTV-IL-0wX" customClass="TaskCollectionViewCell" customModule="KanBan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="218"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="218"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOP-nP-8Bg" customClass="CardView" customModule="KanBan" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="218"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PgL-gm-Lnz">
+                                <rect key="frame" x="8" y="8" width="134" height="202"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpC-vH-Nzv">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="15.666666666666666"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15.67" id="LLo-g5-Z2L"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDF-U9-wiT">
+                                        <rect key="frame" x="0.0" y="20.666666666666664" width="134" height="111.33333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lna-xw-kdY">
+                                        <rect key="frame" x="0.0" y="137" width="134" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="tXX-ls-Uzs"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Doing"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3B-BE-XQv">
+                                        <rect key="frame" x="0.0" y="172" width="134" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Ogi-p9-aoA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="u3B-BE-XQv" secondAttribute="bottom" id="0bf-PP-Ezs"/>
+                                    <constraint firstAttribute="trailing" secondItem="PDF-U9-wiT" secondAttribute="trailing" id="7yb-qb-FoP"/>
+                                    <constraint firstItem="PDF-U9-wiT" firstAttribute="leading" secondItem="PgL-gm-Lnz" secondAttribute="leading" id="AQ7-fB-1r2"/>
+                                    <constraint firstItem="PDF-U9-wiT" firstAttribute="top" secondItem="zpC-vH-Nzv" secondAttribute="bottom" constant="5" id="BH8-DI-haf"/>
+                                    <constraint firstItem="Lna-xw-kdY" firstAttribute="top" secondItem="PDF-U9-wiT" secondAttribute="bottom" constant="5" id="EDa-2x-jfD"/>
+                                    <constraint firstAttribute="trailing" secondItem="zpC-vH-Nzv" secondAttribute="trailing" id="SEO-qd-IZh"/>
+                                    <constraint firstItem="Lna-xw-kdY" firstAttribute="leading" secondItem="PgL-gm-Lnz" secondAttribute="leading" id="f8A-D3-gHG"/>
+                                    <constraint firstItem="u3B-BE-XQv" firstAttribute="leading" secondItem="PgL-gm-Lnz" secondAttribute="leading" id="hdR-iB-Lvk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lna-xw-kdY" secondAttribute="trailing" id="hkc-Mh-eMW"/>
+                                    <constraint firstAttribute="height" constant="202" id="jwK-fU-gkF"/>
+                                    <constraint firstItem="u3B-BE-XQv" firstAttribute="top" secondItem="Lna-xw-kdY" secondAttribute="bottom" constant="5" id="luQ-WU-9Rb"/>
+                                    <constraint firstAttribute="width" constant="134" id="mAw-ui-x4c"/>
+                                    <constraint firstItem="zpC-vH-Nzv" firstAttribute="top" secondItem="PgL-gm-Lnz" secondAttribute="top" id="qVD-pI-A0n"/>
+                                    <constraint firstItem="zpC-vH-Nzv" firstAttribute="leading" secondItem="PgL-gm-Lnz" secondAttribute="leading" id="qys-f3-YOo"/>
+                                    <constraint firstAttribute="trailing" secondItem="u3B-BE-XQv" secondAttribute="trailing" id="xOs-IU-skC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PgL-gm-Lnz" firstAttribute="top" secondItem="BOP-nP-8Bg" secondAttribute="top" constant="8" id="6Fe-1S-bcb"/>
+                            <constraint firstItem="PgL-gm-Lnz" firstAttribute="leading" secondItem="BOP-nP-8Bg" secondAttribute="leading" constant="8" id="WDz-ta-eGt"/>
+                            <constraint firstAttribute="trailing" secondItem="PgL-gm-Lnz" secondAttribute="trailing" constant="8" id="uxo-Y0-nQa"/>
+                            <constraint firstAttribute="bottom" secondItem="PgL-gm-Lnz" secondAttribute="bottom" constant="8" id="zqR-96-7bt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="BOP-nP-8Bg" secondAttribute="bottom" id="JXV-mj-IhE"/>
+                <constraint firstItem="BOP-nP-8Bg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cth-LW-Xpz"/>
+                <constraint firstItem="BOP-nP-8Bg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iSm-vp-amU"/>
+                <constraint firstAttribute="trailing" secondItem="BOP-nP-8Bg" secondAttribute="trailing" id="x8A-gq-rW8"/>
+            </constraints>
+            <size key="customSize" width="150" height="218"/>
+            <connections>
+                <outlet property="deadlineLabel" destination="zpC-vH-Nzv" id="UtP-C8-aiT"/>
+                <outlet property="taskTitleLabel" destination="PDF-U9-wiT" id="mZE-nm-nYs"/>
+            </connections>
+            <point key="canvasLocation" x="206.10687022900763" y="47.887323943661976"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
