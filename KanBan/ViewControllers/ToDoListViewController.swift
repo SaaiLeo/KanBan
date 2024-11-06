@@ -21,7 +21,21 @@ class ToDoListViewController: UIViewController {
         
         TO_DO_LIST.append(Task(id: 1, title: "Complete iOS app UI", description: "Finalize the UI components for the new iOS app.", status: 0, deadline: Date(timeIntervalSince1970: 1700000000)))
         TO_DO_LIST.append(Task(id: 1, title: "Complete iOS app UI", description: "Finalize the UI components for the new iOS app.", status: 0, deadline: nil))
-       
+        
+        let button = UIButton(type: .system)
+        let buttonIcon = UIImage(systemName: "plus")
+        button.setImage(buttonIcon, for: .normal)
+        button.addTarget(self, action: #selector(createNewTask), for: .touchUpInside)
+        
+        let barButtonItem = UIBarButtonItem(customView: button)
+        self.navigationItem.rightBarButtonItem = barButtonItem
+
+    }
+    
+    @objc func createNewTask() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: TaskDetailViewController.identifier) as! TaskDetailViewController
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
